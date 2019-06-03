@@ -14,7 +14,9 @@ Next, we want to split our components up in a logical manner.
 
 For good measure, add a CSS stylesheet.
 
-Lastly, replace the list of fruits with an external one by fetching it from an external API service - https://my-json-server.typicode.com/thoughtworks-jumpstart/api/fruits
+Replace the list of fruits with an external one by fetching it from an external API service - https://my-json-server.typicode.com/thoughtworks-jumpstart/api/fruits
+
+Lastly, publish your app to GitHub Pages. Copy the link and add the link to the description in your repository.
 
 ## Handling user input
 
