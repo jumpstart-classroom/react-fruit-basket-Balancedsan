@@ -1,0 +1,16 @@
+{
+  "name": "react-fruit-basket",
+  "version": "1.0.0",
+  "description": "🧺 A delicious basket of fruits",
+  "main": "index.js",
+  "dependencies": {
+    "node-sass": "^4.12.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "watch-scss": "sass scss/production:css/stylesheets --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

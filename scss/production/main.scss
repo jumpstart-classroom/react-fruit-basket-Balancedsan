@@ -1,0 +1,49 @@
+@import '../mixins/mixins';
+@import '../reset/reset';
+@import '../components/searchBar';
+
+.searchBar {
+  @include flex-box(column);
+
+  h1 {
+    margin: 2rem 0;
+  }
+
+  input {
+    margin: 1rem 0;
+    width: 50%;
+    cursor: pointer;
+  }
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minMax(250px, 1fr));
+  grid-column-gap: 10px;
+
+  section {
+    @include flex-box(column);
+    margin:2rem 0;
+
+    h1{
+        margin:2rem 0;
+    }
+
+    img {
+        width:250px;
+        height:250px;
+        border-radius: 8px;
+    }
+  }
+}
+
+
+.fade-appear{
+    opacity:0;
+    
+    &.fade-appear-active{
+        opacity: 1;
+        transition:opacity 500ms linear;
+    }
+}
+

@@ -1,0 +1,37 @@
+@mixin flex-box($direction){
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: $direction
+}
+
+
+
+@mixin media-breakpoint($point) {
+  $xs: '(min-width: 576px)';
+  $sm: '(min-width: 768px)';
+  $md: '(min-width: 992px)';
+  $lg: '(min-width: 1200px)';
+  $vlg: '(min-width: 1601px)';
+  @if $point == xs {
+    @media #{$xs} {
+      @content;
+    }
+  } @else if $point == sm {
+    @media #{$sm} {
+      @content;
+    }
+  } @else if $point == md {
+    @media #{$md} {
+      @content;
+    }
+  } @else if $point == lg {
+    @media #{$lg} {
+      @content;
+    }
+  } @else if $point == vlg {
+     @media #{$vlg} {
+       @content;
+     }
+  }
+}

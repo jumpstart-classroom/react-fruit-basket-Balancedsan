@@ -1,0 +1,67 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+}
+html body {
+  min-height: 100%;
+}
+
+.searchBar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.searchBar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.searchBar h1 {
+  margin: 2rem 0;
+}
+.searchBar input {
+  margin: 1rem 0;
+  width: 50%;
+  cursor: pointer;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minMax(250px, 1fr));
+  grid-column-gap: 10px;
+}
+.cards section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 2rem 0;
+}
+.cards section h1 {
+  margin: 2rem 0;
+}
+.cards section img {
+  width: 250px;
+  height: 250px;
+  border-radius: 8px;
+}
+
+.fade-appear {
+  opacity: 0;
+}
+.fade-appear.fade-appear-active {
+  opacity: 1;
+  transition: opacity 500ms linear;
+}
+
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,15 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+  body,#div {
+    min-height: 100%;
+  }
+}
+
