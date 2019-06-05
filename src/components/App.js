@@ -15,13 +15,19 @@ class App extends React.Component {
    * sets the initial fruits array value from the api
    */
   componentDidMount = async () => {
-    const fetchedResponse = await fetch(
+    try{
+    const response = await fetch(
       'https://my-json-server.typicode.com/Balancedsan/fruitsApi/fruits/'
-    ).then((response) => response.json());
+    )
+    const fruits = await response.json();
 
     this.setState({
-      fruits: fetchedResponse
+      fruits: fruits
     });
+    }catch(err){
+      console.log(err);
+    }
+
   };
 
   /**

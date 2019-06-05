@@ -1,9 +1,11 @@
 {
   "name": "react-fruit-basket",
+  "homepage": "https://github.com/Balancedsan/react-fruit-basket-Balancedsan.git",
   "version": "1.0.0",
   "description": "🧺 A delicious basket of fruits",
   "main": "index.js",
   "dependencies": {
+    "gh-pages": "^2.0.1",
     "node-sass": "^4.12.0"
   },
   "devDependencies": {},
