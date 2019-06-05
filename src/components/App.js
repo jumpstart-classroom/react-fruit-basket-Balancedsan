@@ -35,20 +35,25 @@ class App extends React.Component {
 
   /**
    * render each card to the screen based on the input keyed  by the user
-   * by default all cards are rendered on the screen
    */
   renderCards = () => {
-    // filter the fruits if the fruit name contains the characters the user has input in the searchbar and render the cards otherwise render all cards
-    let fruitsResult = [...this.state.fruits];
-
-    if (this.state.textValue) {
-      fruitsResult = fruitsResult.filter((fruit) => {
+    if(this.state.textValue){
+      const filtered = this.state.fruits.filter(fruit=> {
         return fruit.type.includes(this.state.textValue);
-      });
+      })
+      return this.createCards(filtered)
+    }else{
+      return this.createCards(this.state.fruits);
     }
+  };
 
-    return fruitsResult.map((fruit) => {
-      const capitalizeName = fruit.type[0].toUpperCase() + fruit.type.slice(1);
+  /**
+   * create the cards for each fruit based on the user query on the search bar
+   * by default all cards are created when no input is keyed by the user
+   */
+  createCards = (array) =>{
+    return array.map(fruit =>{
+     const capitalizeName = fruit.type[0].toUpperCase() + fruit.type.slice(1);
       return (
           <Card
             key={fruit.id}
@@ -57,8 +62,8 @@ class App extends React.Component {
             calories={fruit.calories}
           />
       );
-    });
-  };
+    })
+  }
 
   render() {
     return (
